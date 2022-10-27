@@ -12,12 +12,15 @@ RSS_FEEDS = {'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
              'fox': 'http://feeds.foxnews.com/foxnews/latest',
              'iol': 'http://www.iol.co.za/cmlink/1.640'}
 
-@app.route('/')
-@app.route('/<publication>/')
+#"if strict_slashes is enabled (the default),
+#visiting a branch URL without a trailing slash
+#will redirect to the URL with a slash appended."
+@app.route('/index/', strict_slashes=False)
+@app.route('/index/<publication>/')
 def get_news(publication='bbc'):
 	feed = feedparser.parse(RSS_FEEDS[publication])
 	first_article = feed['entries'][0]
-	return render_template('home.html', article=feed['entries'])#, articles=feed['entries'])
+	return render_template('index.html', article=feed['entries'])#, articles=feed['entries'])
 
 @app.after_request
 def add_header(response):
