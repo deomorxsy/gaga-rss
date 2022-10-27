@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Headlines</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+		<link href="../static/assets/indexpage.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <form>
+	  <input type="text" name="publication" placeholder="search..." />
+	  <input type="submit" value="Submit" />
+	</form>
+    <body>
+		<header>
+            <nav id="menu"> <!--class="menu"-->
+                <ul>
+                    <li><a href="/bbc/" class="menu-item -home -active">BBC</a></li>
+                    <li><a href="/cnn/" class="menu-item">CNN</a> </li>
+                    <li><a href="/fox/" class="menu-item">FOX</a> </li>
+                    <li><a href="/iol/" class="menu-item">IOL</a> </li>
+			    </ul>
+            </nav>
+		</header>
+        <!--Div é colocado pra destacar o texto com fundo branco no css -->
+
+		<div>
+        <h1 class="titulo">Headlines</h1>
+        <!--b>{{article.title}}</b><br />
+            <i>{{article.published}}</i><br />
+            <p>{{article.summary}}</p>
+            <hr/>-->
+		{% for articles in article %}
+			<b><a href="{{articles.link}}">{{articles.title}}</a></b> <br />
+			<i>{{articles.published}}</i> <br />
+			<p>{{articles.summary}}</p>
+			<hr>
+		{% endfor %}
+        </div>
+    </body>
+</html>

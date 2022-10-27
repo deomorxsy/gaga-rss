@@ -1,0 +1,85 @@
+html {
+	font-size: 15px; /* 15px significa 'pixels': o tamanho da fonte base é agora de 10 pixels */
+	font-family: Arial,Helvetica,sans-serif; /*'Menlo', 'Meslo LG', monospace; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+	/*background-color: #1b1b1b; /*#111*/
+	/*background-image: url('https://i.imgur.com/0S817q9.jpg');*/
+	/*color: #c9cacc;*/
+	box-sizing: border-box;
+	cursor: default;
+	border: 7px solid #00a86b;
+    border-top-width: 7px;
+    border-right-width: 7px;
+    border-bottom-width: 7px;
+    border-left-width: 7px;
+    min-height: 100vh;
+
+	/*background:linear-gradient(darkslategray, black) no-repeat fixed*/
+}
+
+body {
+	font-size: 100%;
+	margin: 0 auto;
+	margin-bottom: 42px;
+	/*padding: 0 20px;*/
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 1.725;
+	font-family: Arial,Helvetica,sans-serif; /*'Menlo', monospace;*/
+	text-align: left;
+	background-color: #1b1b1b; /*dark-theme | background-color: #1b1b1b;/*#111*/
+}
+
+div {
+    background-color: white;
+}
+
+h1 {
+    background-color: #00a86b;
+}
+
+#menu ul {
+    font-family: Verdana, Arial;
+	text-align: center;
+	color: #c9cacc;
+	/*margin-bottom: -1em;*/
+	padding: 10px;
+}
+
+.menu{
+	font-family: 'Menlo', 'Meslo LG', monospace; /*Arial, Helvetica, sans-serif;*/
+	text-align: center;
+	margin-bottom: -2em;
+	padding: 40px;
+}
+
+.nick-menu {/*testando navbar do h1-header*/
+	font-family: 'Menlo', 'Meslo LG', monospace; /*Arial, Helvetica, sans-serif;*/
+	text-align: center;
+	margin-bottom: 0em;
+}
+.menu-item {
+	border-bottom:0;
+	color:#FAFAFA;
+	padding:2px 0;
+	margin-left: 10px; /*10px*/
+	margin-right: 10px; /*10px*/
+	display: inline-block;
+}
+
+.menu-item.-home {
+	font-weight:700
+	}
+.menu-item.-active {
+	color:#FAFAFA;
+	border-bottom:2px solid #FAFAFA;
+}
+.menu-item:active,.menu-item:hover {/*colore a parte de trás do texto*/
+	background:0 0;
+	background-color: #c44;
+	outline:0;
+}
+.menu-item:focus {
+	color: #00a86b; /*green #00a86b*/
+	background:#FAFAFA; /*#ff0000; red*/
+}
+#menu ul li {display: inline;}
