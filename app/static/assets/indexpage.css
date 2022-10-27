@@ -29,12 +29,26 @@ body {
 	background-color: #1b1b1b; /*dark-theme | background-color: #1b1b1b;/*#111*/
 }
 
-div {
-    background-color: white;
+.titulo b, a, i, p{
+
+    background-color: #1b1b1b;
+	/*border: 7px solid #FAFAFA;*/
+    color: #c9cacc
+
 }
+
+.titulo { /*div class titulo*/
+    color: #1b1b1b;
+}
+
+a, i, p {
+    padding-left:15px;
+}
+
 
 h1 {
     background-color: #00a86b;
+    padding-left: 15px;
 }
 
 #menu ul {
